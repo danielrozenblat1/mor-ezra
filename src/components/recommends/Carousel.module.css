@@ -1,6 +1,6 @@
-/* Base styles (for screens under 350px) */
 .carouselContainer {
   width: 100%;
+  max-width: 1200px; /* מגביל את הרוחב המקסימלי */
   overflow: hidden;
   position: relative;
   margin: 2% auto;
@@ -14,12 +14,55 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding: 0 10px; /* מוסיף ריווח בצדדים */
 }
 
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
+.carouselItem {
+  min-width: 280px; /* רוחב מינימלי קבוע */
+  max-width: 320px; /* רוחב מקסימלי */
+  margin: 1rem 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 400px; /* גובה קבוע */
+  object-fit: contain; /* שומר על הפרופורציות של התמונה */
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1); /* רקע קל לתמונה */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .carouselItem {
+    min-width: 220px;
+    max-width: 280px;
+  }
+  
+  .carouselImage {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carouselItem {
+    min-width: 180px;
+    max-width: 240px;
+  }
+  
+  .carouselImage {
+    height: 250px;
+  }
+}
+
+/* שאר הסגנונות נשארים כפי שהם */
 .title {
   font-family: 'Assistant', sans-serif;
   font-size: 2rem;
@@ -38,115 +81,4 @@
   text-align: center;
   margin: 1.5% auto;
   color: white;
-}
-
-.carousel:active {
-  cursor: grabbing;
-}
-
-.carouselItem {
-  min-width: 150px;
-  margin: 1rem 0.5rem;
-  border-radius: 6px;
-  overflow: hidden;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.carouselImage {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.carouselTitle {
-  margin-top: 0.3rem;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  font-size: 0.9rem;
-}
-
-/* 350px - 450px */
-@media screen and (min-width: 350px) and (max-width: 450px) {
-  .title {
-      font-size: 1.4rem;
-      width: 85%;
-  }
-  
-  .description {
-      font-size: 1.1rem;
-  }
- 
-}
-
-/* 450px - 550px */
-@media screen and (min-width: 450px) and (max-width: 550px) {
-  .title {
-      font-size: 1.6rem;
-      width: 80%;
-  }
-  
-  .description {
-      font-size: 1.2rem;
-  }
-  
- 
-}
-
-/* 550px - 650px */
-@media screen and (min-width: 550px) and (max-width: 650px) {
-  .title {
-      font-size: 1.7rem;
-      width: 75%;
-  }
-  
-  .description {
-      font-size: 1.25rem;
-  }
-  
- 
-}
-
-/* 650px - 750px */
-@media screen and (min-width: 650px) and (max-width: 750px) {
-  .title {
-      font-size: 1.8rem;
-      width: 70%;
-  }
-  
-  .description {
-      font-size: 1.3rem;
-  }
-  
-  
-}
-
-/* 750px - 850px */
-@media screen and (min-width: 750px) and (max-width: 850px) {
-  .title {
-      font-size: 1.9rem;
-      width: 65%;
-  }
-  
-  .description {
-      font-size: 1.35rem;
-  }
-  
-
-}
-
-/* 850px - 950px */
-@media screen and (min-width: 850px) and (max-width: 950px) {
-  .title {
-      font-size: 2rem;
-      width: 60%;
-  }
-  
-  .description {
-      font-size: 1.4rem;
-  }
-  
-
 }
