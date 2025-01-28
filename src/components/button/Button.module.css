@@ -27,9 +27,7 @@
 }
 
 .button:hover {
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)) padding-box,
-    linear-gradient(45deg, #F7E7CE, #D4AF37, #FFF5E1) border-box;
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 
