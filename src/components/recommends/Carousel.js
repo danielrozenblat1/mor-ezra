@@ -10,8 +10,23 @@ import image7 from "../../images/מור עזרא טיפולים 7.png"
 import image8 from "../../images/מור עזרא טיפולים 8.png"
 import image9 from "../../images/מור עזרא טיפולים 9.png"
 import image10 from "../../images/מור עזרא טיפולים 10.png"
+import image15 from "../../images/מור עזרא טיפולים 15.png"
+import image16 from "../../images/מור עזרא טיפולים 16.png"
+import image17 from "../../images/מור עזרא טיפולים 17.png"
+import image18 from "../../images/מור עזרא טיפולים 18.png"
+import image19 from "../../images/מור עזרא טיפולים 19.png"
+import image20 from "../../images/מור עזרא טיפולים 20.png"
+import image21 from "../../images/מור עזרא טיפולים 21.png"
 import Button from '../button/Button';
 const Carousel = ({ items = [
+  { id: 15, image: image15,  },
+  { id: 16, image: image16,  },
+  { id: 17, image: image17,  },
+  { id: 17, image: image17,  },
+  { id: 18, image: image18,  },
+  { id: 19, image: image19,  },
+  { id: 20, image: image20,  },
+  { id: 21, image: image21,  },
   { id: 1, image: image1,  },
   { id: 2, image: image2, },
   { id: 3, image: image3,  },
