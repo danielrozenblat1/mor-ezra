@@ -22,7 +22,7 @@ const Carousel = ({ items = [
   { id: 15, image: image15,  },
   { id: 16, image: image16,  },
   { id: 17, image: image17,  },
-  { id: 17, image: image17,  },
+
   { id: 18, image: image18,  },
   { id: 19, image: image19,  },
   { id: 20, image: image20,  },
